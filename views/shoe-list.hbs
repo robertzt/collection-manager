@@ -1,0 +1,31 @@
+<table class="table table-striped table-bordered">
+
+    <tr>
+        <th>Brand <a href="/shoe-list?sort=shoe_brandAZ">Sort By Brand A-Z</a><br> <a href="/shoe-list?sort=shoe_brandZA">Sort By Brand Z-A</a>
+<br></th>
+        <th>Name <a href="/shoe-list?sort=shoe_nameAZ">Sort By Name A-Z</a><br> <a href="/shoe-list?sort=shoe_nameZA">Sort By Name Z-A</a>
+<br></th>
+        <th>Type
+    <form action="/shoe-filter">
+            <input class="form-control" type="text" name="search">
+            <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+        </th>
+        <th>Design</th>
+        <th>Weight</th>
+    </tr>
+    {{#each rows}}
+    <tr>
+        <td>{{shoe_brand}}</td>
+        <td>{{shoe_name}}</td>
+        <td>{{shoe_type}}</td>
+        <td>{{shoe_design}}</td>
+        <td>{{shoe_weight}}</td>
+    </tr>
+
+    {{/each}}
+</table>
+
+<button type="back"><a href="/shoes">Undo Sorting</a></button>
+<button type="back"><a href="/">Back Home</a></button>
+<button type="create"><a href="/shoes/create">Create</a></button>
